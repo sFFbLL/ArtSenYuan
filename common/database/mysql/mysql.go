@@ -32,6 +32,7 @@ func Init(cfg *config.Mysql) (err error) {
 		return
 	}
 
+	//设置最大连接数
 	db.SetMaxOpenConns(cfg.DbMaxOpen)
 	db.SetMaxIdleConns(cfg.DbMaxIdle)
 
